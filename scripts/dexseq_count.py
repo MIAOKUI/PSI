@@ -1,4 +1,4 @@
-#!/data/public/tools/python27/bin/python2.7 
+#!/bin/env python
 import sys, itertools, optparse, warnings
 
 optParser = optparse.OptionParser( 

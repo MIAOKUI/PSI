@@ -1,4 +1,4 @@
-#!/data/public/tools/python27/bin/python2.7
+#!/bin/env python
 import sys, itertools, optparse, warnings, re
 optParser = optparse.OptionParser(
         usage = "python prepare_exclusion_count.py [options] <flattened_gff_file> <inclusion.count> <exclusion.count> <output_basename>",
