@@ -51,15 +51,15 @@ ENSRNOG00000033734:015	1.0	1
 ENSRNOG00000033734:016	1.0	1	138029	0	13	48885573	48885815	+	242
 ENSRNOG00000033734:016	1.0	1
 ```
-*. Exonic part ID
-*. PSI value
-*. Low inclusion filter tag, 1 pass, 0.2 failed 
-*. Inclusion raw count from dexseq_count.py
-*. Exclusion raw count from exlcusion_count.py 
-*. Chromosome ID
-*. Start coordinate of exonic part 
-*. End coordinate of exonic part 
-*. Strand tag
-*. Length of exonic part
+*  Exonic part ID
+*  PSI value
+*  Low inclusion filter tag, 1 pass, 0.2 failed 
+*  Inclusion raw count from dexseq_count.py
+*  Exclusion raw count from exlcusion_count.py 
+*  Chromosome ID
+*  Start coordinate of exonic part 
+*  End coordinate of exonic part 
+*  Strand tag
+*  Length of exonic part
 
 If the set **--detail** **yes**, then only showing first three fields.  
