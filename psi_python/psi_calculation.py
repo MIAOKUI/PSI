@@ -193,10 +193,10 @@ def main():
 										  exonic.stop, 
 										  exonic.strand, 
 										  exonic.exonicLen))
-	 
-   		fout.write( '%s\t%s\t%s\n' % (exonic.exonicID,
-					      exonic.psi,
-					      exonic.lowReadTag))
+   		else:
+			fout.write( '%s\t%s\t%s\n' % (exonic.exonicID,
+						      exonic.psi,
+						      exonic.lowReadTag))
 	fout.close()
 
 if __name__ == '__main__':

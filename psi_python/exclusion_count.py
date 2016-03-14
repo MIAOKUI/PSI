@@ -1,6 +1,14 @@
 #!/bin/env python
 import sys, itertools, optparse, warnings
 
+try:
+	import HTSeq
+except ImportError:
+	sys.stderr.write( "Could not import HTSeq. Please install the HTSeq Python framework\n" )
+	sys.stderr.write( "available from http://www-huber.embl.de/users/anders/HTSeq\n" )
+
+
+
 # define junction parser function
 def junction_parser(junctionsLine):
 	'''
@@ -53,12 +61,6 @@ def main():
 		sys.stderr.write( sys.argv[0] + ": Error: Please provide three arguments.\n" )
 		sys.stderr.write( "  Call with '-h' to get usage information.\n" )
 		sys.exit( 1 )
-	try:
-		import HTSeq
-	except ImportError:
-		sys.stderr.write( "Could not import HTSeq. Please install the HTSeq Python framework\n" )
-		sys.stderr.write( "available from http://www-huber.embl.de/users/anders/HTSeq\n" )
-		sys.exit(1)
 		
 	# Import gtf file
 	gtfFile = HTSeq.GFF_Reader(args[0], end_included = True)
