@@ -14,22 +14,22 @@
 
 #### About the input file. 
 * junction.bed file and bam file can be generated directly  from tophat/tophat2
-* flattened_gff_file.gtf should be outputed from dexseq_prepare_annotation.py script inclued in [DEXseq R library](http://bioconductor.org/packages/release/bioc/html/DEXSeq.html)
+* flattened_gff_file.gtf can be generated from dexseq_prepare_annotation.py script included in [DEXseq](http://bioconductor.org/packages/release/bioc/html/DEXSeq.html)
 
 ### For Shell version:
 ```bash
 ./psi_shell/PSI.sh StartPSIStrictFilter flattened_gff_file.gtf readlen alignment_file.bam junctions.bed baseName
 ```
 ### For python version: 
-1  Counting inclusion count
+1. Counting inclusion count
 ```bash 
 ./psi_python/dexseq_count.py -p no -s no -r pos flattened_gff_file.gtf  alignment_file.bam basename.inclusion
 ```
-2  Counting exclusion count 
+2. Counting exclusion count 
 ```bash 
 ./psi_python/exclusion_count.py  flattened_gff_file.gtf junctions.bed basename.exclusion
 ```
-3  Calculate the psi 
+3. Calculate the psi 
 ```bash 
 ./psi_python/psi_calculation.py -l 100  flattened_gff_file.gtf basename.inclusion basename.exclusion basename
 ```
