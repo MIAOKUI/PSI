@@ -1,13 +1,20 @@
 ## Quit Start 
 
-### Dependency and preparation 
+### Dependency and preparation
+##### Runing environment 
+* Linux based system(linux, mac, unix)
+ 
 ##### For python psi script 
-* [python 2.7](https://www.python.org)
+* [Python 2.7](https://www.python.org)
 * [HTSeq](http://www-huber.embl.de/HTSeq/doc/overview.html)
 
 #### For shell psi script
-* [samtools](http://samtools.sourceforge.net/)
-* [bedtools](http://bedtools.readthedocs.org/en/latest/) 
+* [SAMtools](http://samtools.sourceforge.net/)
+* [BEDtools](http://bedtools.readthedocs.org/en/latest/) 
+
+#### About the input file. 
+* junction.bed file and bam file can be generated directly  from tophat/tophat2
+* flattened_gff_file.gtf should be outputed from dexseq_prepare_annotation.py script inclued in [DEXseq R library](http://bioconductor.org/packages/release/bioc/html/DEXSeq.html)
 
 ### For Shell version:
 ```bash
