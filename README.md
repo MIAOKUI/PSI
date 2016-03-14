@@ -16,15 +16,30 @@
 * junction.bed file and bam file can be generated directly  from tophat/tophat2
 * flattened_gff_file.gtf can be generated from dexseq_prepare_annotation.py script included in [DEXseq](http://bioconductor.org/packages/release/bioc/html/DEXSeq.html)
 
-### For Shell version:
+### For Shell PSI script:
 ```bash
 ./psi_shell/PSI.sh StartPSIStrictFilter flattened_gff_file.gtf readlen alignment_file.bam junctions.bed baseName
 ```
-### For python version: 
+### For python PSI script: 
 1. Counting inclusion count
 ```bash 
 ./psi_python/dexseq_count.py -p no -s no -r pos flattened_gff_file.gtf  alignment_file.bam basename.inclusion
 ```
+#### Output
+```bash
+ENSRNOG00000033734:001	38	46548	0	1
+ENSRNOG00000033734:002	11	47993	0	1
+ENSRNOG00000033734:003	12	7772	32484	0.175863
+ENSRNOG00000033734:004	30	54112	2843	0.935926
+ENSRNOG00000033734:005	87	113977	0	1
+``` 
+*  Exonic part ID
+*  Length of exnic part
+*  Inclusion count
+*  Exclusion count 
+*  PSI value 
+
+
 2. Counting exclusion count 
 ```bash 
 ./psi_python/exclusion_count.py  flattened_gff_file.gtf junctions.bed basename.exclusion
@@ -33,7 +48,7 @@
 ```bash 
 ./psi_python/psi_calculation.py -l 100  flattened_gff_file.gtf basename.inclusion basename.exclusion basename
 ```
-#### Sample Result
+#### Output
 ```shell 
 ENSRNOG00000033734:001	1.0	1	44487	0	13	48872971	48873009	+	38
 ENSRNOG00000033734:002	1.0	1	45933	0	13	48873964	48873975	+	11
