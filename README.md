@@ -20,11 +20,6 @@
 ```bash
 ./psi_shell/PSI.sh StartPSIStrictFilter flattened_gff_file.gtf readlen alignment_file.bam junctions.bed baseName
 ```
-### For python PSI script: 
-1. Counting inclusion count
-```bash 
-./psi_python/dexseq_count.py -p no -s no -r pos flattened_gff_file.gtf  alignment_file.bam basename.inclusion
-```
 #### Output
 ```bash
 ENSRNOG00000033734:001	38	46548	0	1
@@ -40,6 +35,11 @@ ENSRNOG00000033734:005	87	113977	0	1
 *  PSI value 
 
 
+### For python PSI script: 
+1. Counting inclusion count
+```bash 
+./psi_python/dexseq_count.py -p no -s no -r pos flattened_gff_file.gtf  alignment_file.bam basename.inclusion
+```
 2. Counting exclusion count 
 ```bash 
 ./psi_python/exclusion_count.py  flattened_gff_file.gtf junctions.bed basename.exclusion
