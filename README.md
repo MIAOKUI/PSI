@@ -111,9 +111,11 @@ sampleTablePath = './sampleTable.csv' ## Here should be the path to sampleTable,
 ```
 
 3. Provide psi result folder
-   ```R
-   psiFolder = './psi_files/'
-   ```
+   
+```R
+psiFolder = './psi_files/'
+```
+
 4. Provide the path to exonic part matrix which can be created by dexseq_prepare_annotation.py script from DEXSeq packages. 
    ```R
    exonicPartMatrixPath ="./homo_sapiens.GRCh38.78_exonic.gtf"
