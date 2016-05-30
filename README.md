@@ -1,8 +1,10 @@
 ## Introduction
 Alternative splicing generates thousands of isoforms to multiply the diversity of the proteome and non-coding RNA transcripts. Current high-throughput sequencing technologies are capable of capturing this post-transcriptional processes with great sensitvity but only yield rather short read lengths. It thus becomes very challenging to predict the entire exon composition of RNA molecules. To qualitatively and quantitatively assess alternative splicing on a genome-wide level without prior knowledge, we developed this pipeline that quantifies the the usage of unknown or known splice sites as well as the expression level of exons to calculate a splicing index called Percent Spliced In (PSI) from RNA-seq and Ribo-seq data. Ranging from 0% for non-included exons to 100% for constitutive exons, it indicates how efficiently an exon sequence is spliced into the pool of transcripts transcribed from a genetic locus. This technology is capable of identifying and quantifying novel and complex exon skipping, alternative 5 and 3 splice sites and mutually exclusive splicing events. 
 
-For detail information please refer to our publication:
+For detail information please refer to our publication: If you can use our script, please cite our paper. 
 * [Schafer S, Miao K, Benson CC, Heinig M, Cook SA & Hubner N (2015) Alternative Splicing Signatures in RNA-seq Data: Percent Spliced in (PSI).Curr Protoc Hum Genet 87, 11.16.1-11.16.14.](http://onlinelibrary.wiley.com/doi/10.1002/0471142905.hg1116s87/abstract)
+* Feel free to Contact us: Schafer S(Sebastian Schaefer (NHCS) <sebastian.schaefer@nhcs.com.sg>), Miao Kui<miaokui1231@hotmail.com>
+* License: GPL v3 
 
 ## Quick Start
 ### Dependency and preparation
