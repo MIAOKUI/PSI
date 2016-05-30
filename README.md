@@ -89,69 +89,67 @@ ENSRNOG00000033734:003	0.170570528295	1
 ENSRNOG00000033734:004	0.933449251441	1
 ``` 
 
-### Visulization
+## Visulization
 We also provide R and ggplot2 base visulization script for psi result visuliztion, located on psi_visulization directory. 
 *  psi_plot_vis.r: including all the function used for ploting PSI result
 *  psi.plot.r: psi plot wrapper, which import functions from psi_plot_vis.r, user can do some configuration on it to fit local environment. 
 
-#### Configuration and running. 
+**Configuration and running.** 
 For simple visulization, user only need to run psi.plot.r. Before running, some options need to be changed to fit local environment. 
   R package dependency: reshape2, ggplot2, rtracklayer, gridExtra, grid, plyr
 
 1. Source psi_plot_vis.r script
-```R
-source('./psi_plot_vis.r') ## Here should be the correct path to the psi_plot_vis.r script
-```
+   ```R
+   source('./psi_plot_vis.r') ## Here should be the correct path to the psi_plot_vis.r script
+   ```
 2. Provide sample experiment table like DESeq style
-```R
-sampleTablePath = './sampleTable.csv' ## Here should be the path to sampleTable, user can refer to the testing data to create own one. 
-```
+   ```R
+   sampleTablePath = './sampleTable.csv' ## Here should be the path to sampleTable, user can refer to the testing data to create own one. 
+   ```
 3. Provide psi result folder
-```R
-psiFolder = './psi_files/'
-```
+   ```R
+   psiFolder = './psi_files/'
+   ```
 4. Provide the path to exonic part matrix which can be created by dexseq_prepare_annotation.py script from DEXSeq packages. 
-```R
-exonicPartMatrixPath ="./homo_sapiens.GRCh38.78_exonic.gtf"
-```
+   ```R
+   exonicPartMatrixPath ="./homo_sapiens.GRCh38.78_exonic.gtf"
+   ```
 5. gene id 
-```R
-gene_id = "ENSG00000099810+ENSG00000264545+ENSG00000274055+ENSG00000264801+ENSG00000240498"
-```
+   ```R
+   gene_id = "ENSG00000099810+ENSG00000264545+ENSG00000274055+ENSG00000264801+ENSG00000240498"
+   ```
 6. Optional if aggregate the PSI by experiment group. 
-```R
-as.group = TRUE
-```
-
+   ```R
+   as.group = TRUE
+   ```
 8 For ploting a single genes, refering following code. 
-```R
-psiTable <- importPSI(sampleTablePath, psiFolder)
-exonicPartMatrix <- import(exonicPartMatrixPath)
-geneAnnot <- getGenesAnot(gene_id, exonicPartMatrix)
-genePsi <- getGenesPsi(gene_id = gene_id,
-                       psiTable = psiTable, 
-                       sampleTablePath = sampleTablePath,
-                       as.group = TRUE)
-## ploting the psi 
-plot(psiPlot(geneAnnot, gene_id, genePsi))
-```
-
+   ```R
+   psiTable <- importPSI(sampleTablePath, psiFolder)
+   exonicPartMatrix <- import(exonicPartMatrixPath)
+   geneAnnot <- getGenesAnot(gene_id, exonicPartMatrix)
+   genePsi <- getGenesPsi(gene_id = gene_id,
+                          psiTable = psiTable, 
+                          sampleTablePath = sampleTablePath,
+                          as.group = TRUE)
+   ## ploting the psi 
+   plot(psiPlot(geneAnnot, gene_id, genePsi))
+   ```
 7. For batch ploting a gene list, user can refering following code. 
-```R
-## Gene list
-gene_list =readLines("./gene_list.txt")
-psiTable <- importPSI(sampleTablePath, psiFolder)
-for(sample in  gene_list ){
-  geneAnnot <- getGenesAnot(sample, exonicPartMatrix)
-  genePsi <- getGenesPsi(gene_id = sample,
-                         psiTable = psiTable, 
-                         sampleTablePath = sampleTablePath,
-                         as.group = TRUE)
-  path.out <- file.path("./plots/")
-  if(!file.exists(path.out)){dir.create(path.out)}
-  pdf(file=paste("./plots/",sample,'.pdf',sep = ''),width=40,height=30 ) 
-  plot(psiPlot(geneAnnot, sample, genePsi))
-  dev.off()
-```
+   ```R
+   ## Gene list
+   gene_list =readLines("./gene_list.txt")
+   psiTable <- importPSI(sampleTablePath, psiFolder)
+   for(sample in  gene_list ){
+     geneAnnot <- getGenesAnot(sample, exonicPartMatrix)
+     genePsi <- getGenesPsi(gene_id = sample,
+                            psiTable = psiTable, 
+                            sampleTablePath = sampleTablePath,
+                            as.group = TRUE)
+     path.out <- file.path("./plots/")
+     if(!file.exists(path.out)){dir.create(path.out)}
+     pdf(file=paste("./plots/",sample,'.pdf',sep = ''),width=40,height=30 ) 
+     plot(psiPlot(geneAnnot, sample, genePsi))
+     dev.off()
+   ```
 
 
