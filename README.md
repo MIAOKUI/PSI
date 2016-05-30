@@ -113,10 +113,9 @@ For simple visulization, user only need to run psi.plot.r. Before running, some 
 
 3. Provide psi result folder
    
-```R
-psiFolder = './psi_files/'
-```
-
+ ```R
+ psiFolder = './psi_files/'
+ ```
 4. Provide the path to exonic part matrix which can be created by dexseq_prepare_annotation.py script from DEXSeq packages. 
    
  ```R
@@ -132,7 +131,7 @@ psiFolder = './psi_files/'
  ```R
  as.group = TRUE
  ```
-8 For ploting a single genes, refering following code. 
+8. For ploting a single genes, refering following code. 
    
  ```R
  psiTable <- importPSI(sampleTablePath, psiFolder)
