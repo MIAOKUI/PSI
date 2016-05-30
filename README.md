@@ -99,13 +99,15 @@ For simple visulization, user only need to run psi.plot.r. Before running, some 
   R package dependency: reshape2, ggplot2, rtracklayer, gridExtra, grid, plyr
 
 1. Source psi_plot_vis.r script
-   ```R
+```R
    source('./psi_plot_vis.r') ## Here should be the correct path to the psi_plot_vis.r script
-   ```
+```
+
 2. Provide sample experiment table like DESeq style
-   ```R
+```R
    sampleTablePath = './sampleTable.csv' ## Here should be the path to sampleTable, user can refer to the testing data to create own one. 
-   ```
+```
+
 3. Provide psi result folder
    ```R
    psiFolder = './psi_files/'
