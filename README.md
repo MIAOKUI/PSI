@@ -116,35 +116,40 @@ psiFolder = './psi_files/'
 ```
 
 4. Provide the path to exonic part matrix which can be created by dexseq_prepare_annotation.py script from DEXSeq packages. 
-   ```R
-   exonicPartMatrixPath ="./homo_sapiens.GRCh38.78_exonic.gtf"
-   ```
+   
+ ```R
+ exonicPartMatrixPath ="./homo_sapiens.GRCh38.78_exonic.gtf"
+ ```
 5. gene id 
-   ```R
-   gene_id = "ENSG00000099810+ENSG00000264545+ENSG00000274055+ENSG00000264801+ENSG00000240498"
-   ```
+  
+ ```R
+ gene_id = "ENSG00000099810+ENSG00000264545+ENSG00000274055+ENSG00000264801+ENSG00000240498"
+ ```
 6. Optional if aggregate the PSI by experiment group. 
-   ```R
-   as.group = TRUE
-   ```
+
+ ```R
+ as.group = TRUE
+ ```
 8 For ploting a single genes, refering following code. 
-   ```R
-   psiTable <- importPSI(sampleTablePath, psiFolder)
-   exonicPartMatrix <- import(exonicPartMatrixPath)
-   geneAnnot <- getGenesAnot(gene_id, exonicPartMatrix)
-   genePsi <- getGenesPsi(gene_id = gene_id,
-                          psiTable = psiTable, 
-                          sampleTablePath = sampleTablePath,
-                          as.group = TRUE)
-   ## ploting the psi 
-   plot(psiPlot(geneAnnot, gene_id, genePsi))
-   ```
+   
+ ```R
+ psiTable <- importPSI(sampleTablePath, psiFolder)
+ exonicPartMatrix <- import(exonicPartMatrixPath)
+ geneAnnot <- getGenesAnot(gene_id, exonicPartMatrix)
+ genePsi <- getGenesPsi(gene_id = gene_id,
+                        psiTable = psiTable, 
+                        sampleTablePath = sampleTablePath,
+                        as.group = TRUE)
+ ## ploting the psi 
+ plot(psiPlot(geneAnnot, gene_id, genePsi))
+ ```
 7. For batch ploting a gene list, user can refering following code. 
-   ```R
-   ## Gene list
-   gene_list =readLines("./gene_list.txt")
-   psiTable <- importPSI(sampleTablePath, psiFolder)
-   for(sample in  gene_list ){
+   
+ ```R
+ ## Gene list
+ gene_list =readLines("./gene_list.txt")
+ psiTable <- importPSI(sampleTablePath, psiFolder)
+ for(sample in  gene_list ){
      geneAnnot <- getGenesAnot(sample, exonicPartMatrix)
      genePsi <- getGenesPsi(gene_id = sample,
                             psiTable = psiTable, 
@@ -155,6 +160,6 @@ psiFolder = './psi_files/'
      pdf(file=paste("./plots/",sample,'.pdf',sep = ''),width=40,height=30 ) 
      plot(psiPlot(geneAnnot, sample, genePsi))
      dev.off()
-   ```
+ ```
 
 
