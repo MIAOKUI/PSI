@@ -26,11 +26,11 @@ For detail information please refer to our publication:
     * flattened_gff_file.gtf can be generated from dexseq_prepare_annotation.py script included in [DEXseq](http://bioconductor.org/packages/release/bioc/html/DEXSeq.html)
 
 ## General Usage
-*  For Shell PSI script:
+###  For Shell PSI script:
 ```bash
 ./psi_shell/PSI.sh StartPSIStrictFilter flattened_gff_file.gtf readlen alignment_file.bam junctions.bed baseName
 ```
-#### Output
+### Output
 ```bash
 ENSRNOG00000033734:001	38	46548	0	1
 ENSRNOG00000033734:002	11	47993	0	1
