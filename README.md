@@ -7,23 +7,23 @@ For detail information please refer to our publication:
 ## Quick Start
 ### Dependency and preparation
 1.  Runing environment 
-* Linux based system(linux, mac, unix)
+    * Linux based system(linux, mac, unix)
  
 2.  For python psi script 
-* [Python 2.7](https://www.python.org)
-* [HTSeq](http://www-huber.embl.de/HTSeq/doc/overview.html)
+    * [Python 2.7](https://www.python.org)
+    * [HTSeq](http://www-huber.embl.de/HTSeq/doc/overview.html)
 
 3.  For shell psi script
-* [SAMtools](http://samtools.sourceforge.net/)
-* [BEDtools](http://bedtools.readthedocs.org/en/latest/) 
+    * [SAMtools](http://samtools.sourceforge.net/)
+    * [BEDtools](http://bedtools.readthedocs.org/en/latest/) 
 
-4. # For Visulization
-* R
-* R package dependency: reshape2, ggplot2, rtracklayer, gridExtra, grid, plyr
+4.  For Visulization
+    * R
+    * R package dependency: reshape2, ggplot2, rtracklayer, gridExtra, grid, plyr
 
 5.  About the input file. 
-* junction.bed file and bam file can be generated directly  from tophat/tophat2
-* flattened_gff_file.gtf can be generated from dexseq_prepare_annotation.py script included in [DEXseq](http://bioconductor.org/packages/release/bioc/html/DEXSeq.html)
+    * junction.bed file and bam file can be generated directly  from tophat/tophat2
+    * flattened_gff_file.gtf can be generated from dexseq_prepare_annotation.py script included in [DEXseq](http://bioconductor.org/packages/release/bioc/html/DEXSeq.html)
 
 ## General Usage
 ### For Shell PSI script:
