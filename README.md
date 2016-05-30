@@ -100,15 +100,14 @@ For simple visulization, user only need to run psi.plot.r. Before running, some 
 
 1. Source psi_plot_vis.r script
 
-```R
-source('./psi_plot_vis.r') ## Here should be the correct path to the psi_plot_vis.r script
-```
-
+ ```R
+ source('./psi_plot_vis.r') ## Here should be the correct path to the psi_plot_vis.r script
+ ```
 2. Provide sample experiment table like DESeq style
 
-```R
-sampleTablePath = './sampleTable.csv' ## Here should be the path to sampleTable, user can refer to the testing data to create own one. 
-```
+ ```R
+ sampleTablePath = './sampleTable.csv' ## Here should be the path to sampleTable, user can refer to the testing data to create own one. 
+ ```
 
 3. Provide psi result folder
    
