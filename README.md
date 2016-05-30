@@ -6,22 +6,22 @@ For detail information please refer to our publication:
 
 ## Quick Start
 ### Dependency and preparation
-##### Runing environment 
+1.  Runing environment 
 * Linux based system(linux, mac, unix)
  
-##### For python psi script 
+2.  For python psi script 
 * [Python 2.7](https://www.python.org)
 * [HTSeq](http://www-huber.embl.de/HTSeq/doc/overview.html)
 
-#### For shell psi script
+3.  For shell psi script
 * [SAMtools](http://samtools.sourceforge.net/)
 * [BEDtools](http://bedtools.readthedocs.org/en/latest/) 
 
-#### For Visulization
+4. # For Visulization
 * R
 * R package dependency: reshape2, ggplot2, rtracklayer, gridExtra, grid, plyr
 
-#### About the input file. 
+5.  About the input file. 
 * junction.bed file and bam file can be generated directly  from tophat/tophat2
 * flattened_gff_file.gtf can be generated from dexseq_prepare_annotation.py script included in [DEXseq](http://bioconductor.org/packages/release/bioc/html/DEXSeq.html)
 
