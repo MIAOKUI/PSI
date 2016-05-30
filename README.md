@@ -3,7 +3,7 @@ Alternative splicing generates thousands of isoforms to multiply the diversity o
 
 For detail information please refer to our publication: If you can use our script, please cite our paper. 
 * [Schafer S, Miao K, Benson CC, Heinig M, Cook SA & Hubner N (2015) Alternative Splicing Signatures in RNA-seq Data: Percent Spliced in (PSI).Curr Protoc Hum Genet 87, 11.16.1-11.16.14.](http://onlinelibrary.wiley.com/doi/10.1002/0471142905.hg1116s87/abstract)
-* Feel free to Contact us: Schafer S(Sebastian Schaefer (NHCS) <sebastian.schaefer@nhcs.com.sg>), Miao Kui<miaokui1231@hotmail.com>
+* Feel free to Contact us: Sebastian Schaefer (NHCS) <sebastian.schaefer@nhcs.com.sg>, Miao Kui <miaokui1231@hotmail.com>
 * License: GPL v3 
 
 ## Quick Start
