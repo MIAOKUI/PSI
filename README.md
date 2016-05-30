@@ -103,6 +103,7 @@ For simple visulization, user only need to run psi.plot.r. Before running, some 
 ```R
 source('./psi_plot_vis.r') ## Here should be the correct path to the psi_plot_vis.r script
 ```
+
 2. Provide sample experiment table like DESeq style
 
 ```R
