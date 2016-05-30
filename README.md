@@ -3,7 +3,7 @@ Alternative splicing generates thousands of isoforms to multiply the diversity o
 
 For detail information please refer to our publication: If you can use our script, please cite our paper. 
 * [Schafer S, Miao K, Benson CC, Heinig M, Cook SA & Hubner N (2015) Alternative Splicing Signatures in RNA-seq Data: Percent Spliced in (PSI).Curr Protoc Hum Genet 87, 11.16.1-11.16.14.](http://onlinelibrary.wiley.com/doi/10.1002/0471142905.hg1116s87/abstract)
-* Feel free to Contact us: Sebastian Schaefer (NHCS) <sebastian.schaefer@nhcs.com.sg>, Miao Kui <miaokui1231@hotmail.com>
+* Feel free to contact us: Sebastian Schaefer (NHCS) <sebastian.schaefer@nhcs.com.sg>, Miao Kui <miaokui1231@hotmail.com>
 * License: GPL v3 
 
 ## Quick Start
@@ -40,6 +40,7 @@ ENSRNOG00000033734:003	12	7772	32484	0.175863
 ENSRNOG00000033734:004	30	54112	2843	0.935926
 ENSRNOG00000033734:005	87	113977	0	1
 ``` 
+**Field description**
 *  Exonic part ID
 *  Length of exnic part
 *  Inclusion count
@@ -48,6 +49,7 @@ ENSRNOG00000033734:005	87	113977	0	1
 
 
 **For python PSI script:**
+
 1. Counting inclusion count
 
  ```bash 
@@ -63,7 +65,7 @@ ENSRNOG00000033734:005	87	113977	0	1
  ```bash 
  ./psi_python/psi_calculation.py -l 100  flattened_gff_file.gtf basename.inclusion basename.exclusion basename
  ```
-**NOTICE**: step 1 and step two can run parallel. 
+**NOTICE**: step 1 and step 2 can be run parallel. 
 
 **Output**
 ```shell 
@@ -72,6 +74,7 @@ ENSRNOG00000033734:002	1.0	1	45933	0	13	48873964	48873975	+	11
 ENSRNOG00000033734:003	0.170570528295	1	7490	32484	13	48874085	48874097	+	12
 ENSRNOG00000033734:004	0.933449251441	1	51960	2843	13	48876463	48876493	+	30
 ```
+**Field description**
 *  Exonic part ID
 *  PSI value
 *  Low inclusion filter tag, 1 pass, 0.2 failed 
@@ -92,13 +95,13 @@ ENSRNOG00000033734:004	0.933449251441	1
 ``` 
 
 ## Visulization
-We also provide R and ggplot2 base visulization script for psi result visuliztion, located on psi_visulization directory. 
+We also provide R and ggplot2 based visulization script for psi result visulization, located on psi_visulization directory. 
 *  psi_plot_vis.r: including all the function used for ploting PSI result
-*  psi.plot.r: psi plot wrapper, which import functions from psi_plot_vis.r, user can do some configuration on it to fit local environment. 
+*  psi.plot.r: psi plot wrapper, which import functions from psi_plot_vis.r, where user can do some configuration to fit local environment. 
 
 **Configuration and running.** 
+
 For simple visulization, user only need to run psi.plot.r. Before running, some options need to be changed to fit local environment. 
-  R package dependency: reshape2, ggplot2, rtracklayer, gridExtra, grid, plyr
 
 1. Source psi_plot_vis.r script
 
@@ -144,7 +147,7 @@ For simple visulization, user only need to run psi.plot.r. Before running, some 
  ## ploting the psi 
  plot(psiPlot(geneAnnot, gene_id, genePsi))
  ```
-7. For batch ploting a gene list, user can refering following code. 
+7. For batch ploting a gene list,  refering following code. 
    
  ```R
  ## Gene list
